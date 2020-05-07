@@ -4,18 +4,17 @@
         <app-navbar [btnText]= "buttonText"></app-navbar>
     </div>
   </div>
-  <div class="row py-2">
-    <div class="col-4">
-      <app-card [data]= "picData[1]"></app-card>
+  <div class="row">
+      <div class="col-12">
+          <app-filter (stars)="addFilter($event)" ></app-filter>
+      </div>
     </div>
-    <div class="col-4">
-        <app-card [data]= "picData[2]" ></app-card>
-
-    </div>
-
-    <div class="col-4">
-        <app-card [data]= "picData[0]" ></app-card>
-
-    </div>
+  <div class="row py-2 mx-2">
+      
+        <div class="col-4" *ngFor="let item of dataArray">
+          <app-card (clickText)="updateNavBar($event)"  [data]= "item"></app-card>
+        </div>
+    
+   
   </div>
 </div>

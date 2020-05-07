@@ -7,12 +7,14 @@ import { AppComponent } from '../rootcomponent/app.component';
 import { NavBarComponent } from '../navbar/navbar.component';
 import { CardComponent } from '../card/card.component';
 import { from } from 'rxjs';
+import { FilterComponent } from '../filter/filter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-    CardComponent
+    CardComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,

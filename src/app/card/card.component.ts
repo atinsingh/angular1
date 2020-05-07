@@ -1,6 +1,6 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { EventEmitter } from 'events';
+
 
 @Component({
   selector: 'app-card',
@@ -11,10 +11,10 @@ export class CardComponent implements OnInit {
 
   imagePath: string;
   @Input()
-  data: { imageSrc, title ,btnText };
+  data: { imageSrc, title ,btnText, star };
 
   @Output()
-  clickText  = new EventEmitter();
+  clickText  = new EventEmitter<string> ();
 
   constructor(private httpClient: HttpClient) {
     //
@@ -31,7 +31,7 @@ export class CardComponent implements OnInit {
 
 
   updateText(text): void{
-      console.log(text);
+     this.clickText.emit(text);
   }
 
 

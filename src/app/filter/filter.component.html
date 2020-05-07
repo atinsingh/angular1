@@ -1,0 +1,6 @@
+<div class="btn-group col-12" role="group" aria-label="Basic example">
+        <button (click)="applyFilter(5)"  type="button" class="btn btn-primary">5 Star</button>
+        <button  (click)="applyFilter(3)" type="button" class="btn btn-secondary">3-Star</button>
+        <button  (click)="applyFilter(4)"type="button" class="btn btn-warning">4-Star</button>
+</div>
+<div *ngIf="enableCheckMe" class="col col-xs-6 pull-right">Check Me Out</div>
