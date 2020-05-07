@@ -1,10 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from '../rootcomponent/app.component';
 import { NavBarComponent } from '../navbar/navbar.component';
 import { CardComponent } from '../card/card.component';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,8 @@ import { CardComponent } from '../card/card.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
